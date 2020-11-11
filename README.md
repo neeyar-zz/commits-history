@@ -15,7 +15,7 @@
 
 
 Инструкция по использованию:
-Для запуска потребуются Python 3.7, Django, а также библиотеки requests, environ.
+Для запуска потребуются Python 3, а также библиотеки Django, requests, environ, django-environ.
 
 Сервер запускается командой 'python manage.py runserver' с каталога 'commits'. 
 
