@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hello!
+{% endblock %}
+
+{% block content %}
+    <h2>Repositories</h2>
+    <ul>
+        <li>{{ repo_context.full_name }}</li>
+        <li>{{ repo_context.description }}</li> 
+        <li>{{ repo_context.created_at }}</li> 
+        <li>{{ repo_context.owner_login }}</li> 
+        <li>{{ repo_context.url }}</li>  
+    </ul>
+    <ul>
+        <li><pre>{{ com_context.repo_full_name }}</pre></li>
+        <li><pre>{{ com_context.full | pprint }}</pre></li>
+    </ul>
+
+    
+{% endblock %}

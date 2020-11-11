@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}
+Hello!
+{% endblock %}
+
+{% block content %}
+    <h2>Repositories</h2>
+    <form action="/add" method="get">
+        <input type="submit" value="Add a new repository">
+    </form>    
+    {% for repo in repos %}
+</br>
+    <tr class='success'>
+        <td><p>Full name: <a href='/repo/{{repo.id}}/download'>{{ repo.full_name }}</a></p></td>
+        <td><p>Description: {{ repo.description }}</p></td>
+        <td><p>Date of creation: {{ repo.created_at }}</p></td>
+        <td><p>Owner's login: {{ repo.owner_login }}</p></td>
+        <td><p>Url: {{ repo.url }}</p></td>
+    </br>
+    </tr>
+    {% endfor %}
+{% endblock %}
