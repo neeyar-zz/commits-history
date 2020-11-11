@@ -90,4 +90,3 @@ def download_view(request, pk: int) -> HttpResponse:
     repo_context.update(com_context)
 
     return render(request, "appx/repository_download.html", repo_context)
-е
